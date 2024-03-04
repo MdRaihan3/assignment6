@@ -50,6 +50,7 @@ const displayNews = (posts) => {
         allPostContainer.appendChild(postCard)
     });
 }
+
  let num = 0;
 const handleShowTitle = (postTitle,postView) => {
     num++;
@@ -65,7 +66,6 @@ const handleShowTitle = (postTitle,postView) => {
                             </div>
 `
 titleDivContainer.appendChild(titleDiv)
-
 }
 
 const latestPost = async () =>{
@@ -74,6 +74,7 @@ const latestPost = async () =>{
     getLatestPost(data)
     }
 latestPost()
+
 const getLatestPost =(data) =>{
     const latestPostContainer = document.getElementById('latest-post-container')
     data.forEach(singlePost =>{
@@ -99,11 +100,13 @@ latestPostCard.innerHTML = `
 latestPostContainer.appendChild(latestPostCard)
     })
 }
+
 const showSearchPost = () =>{
     const searchField =document.getElementById('search-field');
     const inputText = searchField.value;
 loadQuerySearchPost(inputText)
 }
+
 const loadQuerySearchPost = async (searchText) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
     const data = await res.json();
