@@ -80,7 +80,7 @@ const getLatestPost =(data) =>{
 const latestPostCard = document.createElement('div');
 let latestPostDate = singlePost.author.posted_date ? singlePost.author.posted_date : 'No publish date';
 let latestPostDesignation = singlePost.author.designation ? singlePost.author.designation: 'Unknown';
-latestPostCard.classList = 'p-4 border-[#12132D40] border-2 rounded-3xl bg-[#12132D0D] space-y-2'
+latestPostCard.classList = 'p-4 border-[#12132D40] border-4 rounded-3xl bg-[#12132D0D] space-y-2'
 latestPostCard.innerHTML = `
               <div class="rounded-3xl"><img src="${singlePost.cover_image}" alt=""></div>
                     <div class="flex"><img src="images/date.svg" alt=""> ${latestPostDate}</div>
