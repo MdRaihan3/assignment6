@@ -6,13 +6,13 @@
 .font-mulish{font-family: "Mulish", sans-serif;}
 
 .sec1{  
-    background-image:url("images/bgbanner.png");
+    background-image:url("../images/bgbanner.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #sec3-div2{  
-    background-image:url("images/joinforum.png");
+    background-image:url("../images/joinforum.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
