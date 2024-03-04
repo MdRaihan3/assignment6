@@ -111,6 +111,6 @@ const loadQuerySearchPost = async (searchText) => {
     console.log(postData)
     displayNews(postData)
 }
-
+let b = 0;
 
 
