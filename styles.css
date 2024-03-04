@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.font-inter{  font-family: "Inter", sans-serif;}
+
+.font-mulish{font-family: "Mulish", sans-serif;}
+
+.sec1{  
+    background-image:url("images/bgbanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sec3-div2{  
+    background-image:url("images/joinforum.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width:600px){
+#hid-navbar{
+    display: none;
+    position: absolute;
+}
+}

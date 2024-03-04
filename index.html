@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily-Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="font-mulish">
+        <nav class="navbar bg-base-100 lg:mx-20 lg:my-10 w-auto">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div id="hid-navbar" class="flex gap-4">
+                    <div class="w-10 rounded-full tooltip" data-tip="Home">
+                        <img alt="Tailwind CSS Navbar component" src="images/home.svg" />
+                    </div>
+    
+                    <div class="w-10 rounded-full tooltip" data-tip="Edit">
+                        <img alt="Tailwind CSS Navbar component" src="images/pen.svg" />
+                    </div>
+                    <div class="w-10 rounded-full tooltip" data-tip="Add">
+                        <img alt="Tailwind CSS Navbar component" src="images/people.svg" />
+                    </div>
+                    <div class="w-10 rounded-full tooltip" data-tip="Bookmark">
+                        <img alt="Tailwind CSS Navbar component" src="images/flag.svg" />
+                    </div>
+                </div>
+                
+
+                <div class="form-control">
+                    <button class="btn text-xl text-white bg-[#797DFC] rounded-full px-6">Sign In</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="font-mulish">
+        <section
+            class="sec1 bg-[#12132D] rounded-3xl text-left w-auto lg:h-auto lg:mx-20 lg:my-10 border-red-500 border-4">
+            <div class="flex flex-col lg:flex-row p-1 lg:p-12 gap-8">
+                <div class="text-white	font-extrabold flex-1 space-y-6">
+                    <h3 class=" text-6xl">Welcome to the <span class="text-[#3e43cb]">ReTro</span> Forum</h3>
+                    <p class="text-xl font-medium">Share your favorite opinion and win forum coffee mug!</p>
+                    <input id="search-field" class="p-3 pr-20 lg:pr-36 text-black rounded-full" type="text"
+                        placeholder="Search here anything">
+                    <button onclick="showSearchPost()"
+                        class=" py-1 px-3 text-lg -ml-24 lg:-ml-24 font-bold text-white bg-[#797DFC] rounded-full">Search</button>
+                </div>
+                <div class="w-auto flex-1">
+                    <div class="bg-white text-2xl font-medium p-10 rounded-3xl flex justify-between">
+                        <div class="">
+                            <p>Registered Users</p>
+                            <p>Forum</p>
+                            <p>Topics</p>
+                            <p>Replies</p>
+
+                        </div>
+                        <div>
+                            <p>3021</p>
+                            <p>854</p>
+                            <p>741</p>
+                            <p>1685</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sec2 lg:mx-20 lg:my-20">
+            <div class="text-center my-10">
+                <h3 class=" text-4xl font-bold">Let's Discuss</h3>
+                <p class="text-lg py-8">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing features allow for a streamlined .</p>
+            </div>
+
+            <div class="flex justify-between flex-col lg:flex-row">
+                <div id="all-post-container" class="space-y-4">
+
+                </div>
+                <div>
+                    <div class="p-4 rounded-2xl bg-[#12132D0D] space-y-4">
+                        <div class="flex justify-between p-4 min-w-64">
+                            <div>Title</div>
+                            <div class="inline-flex"><img src="images/mark-read.svg" alt="">Mark as read ( <span
+                                    id="mark-as-read">0</span> )
+                            </div>
+                        </div>
+                        <div id="view-post-container">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sec3 bg-[#12132D] rounded-3xl text-left lg:min-h-60 lg:mx-20 lg:my-20">
+            <div class="p-12 flex flex-col lg:justify-between lg:flex-row">
+                <div class="text-white space-y-6 flex-1">
+                    <h3 class="text-4xl font-extrabold">Join Our Forum</h3>
+                    <p class="text-lg">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run
+                        unit tests and view the results directly within the app. </p>
+                    <button class="btn text-white rounded-full bg-[#797DFC] text-xl font-bold">Registered Now</button>
+                </div>
+                <div id="sec3-div2" class="w-auto flex-1">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sec4 lg:mx-20 lg:my-20">
+            <div class="text-center">
+                <h3 class=" text-4xl font-bold">Latest Posts</h3>
+                <p class="text-lg py-8">Yes, you can run see all our latest posts here.</p>
+            </div>
+            <div id="latest-post-container" class="flex justify-between flex-col lg:flex-row gap-8">
+
+            </div>
+        </section>
+    </main>
+    <footer class="text-center lg:my-20 space-y-6 bg-[#12132D0D]">
+        <h3 class="text-4xl	pt-10 font-bold">ReTro</h3>
+        <p>The best Retro forums, communities, discussion and message boards curated from thousands of forums on the web
+            and <br> ranked by popularity, active threads, and member count.</p>
+        <div class="flex justify-center gap-5">
+            <img src="images/twitter.svg" alt="">
+            <img src="images/facebook.svg" alt="">
+            <img src="images/instagram.svg" alt="">
+        </div>
+        <hr>
+        <p class="font-light pb-8">2017, All Rights Reserved.</p>
+    </footer>
+    <script src="script/index.js"></script>
+</body>
+
+</html>
